@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+@import url("https://at.alicdn.com/t/font_3242902_tk431ukiufo.css");
+
+:root {
+  font-size: 16px;
+  font-family: "Caveat", cursive;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  --color-light: #fff;
+  --color-dark: #212330;
+  --color-gray-700: #374151;
+  --color-blue: #2b7489;
+  --color-yellow: #cf9e27;
+}
+
+html[data-theme="dark"] {
+  --color-light: #212330;
+  --color-gray-700: #e5e7eb;
+  --color-dark: #fff;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0 1rem;
+  color: var(--color-gray-700);
+  background-color: var(--color-light);
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+p {
+  font-size: 3rem;
+}
+
+section {
+  display: flex;
+  margin: 1rem 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  height: 3rem;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f3f4f6;
+  background-color: rgba(0, 119, 250, 1);
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(0, 119, 250, 0.6);
+}
+
+i {
+  font-size: 1.5rem !important;
+  font-weight: normal;
+  margin-right: 0.5rem;
+}
+
+footer {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
