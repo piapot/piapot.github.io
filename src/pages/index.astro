@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to my homepage.">
+  <main class="hero min-h-screen bg-amber-500 dark:bg-blue-700 text-white dark:text-gray-300">
+    <article class="hero-content text-center">
+      <section>
+        <h1 class="text-5xl lg:text-7xl font-bold">Hello there!</h1>
+        <p class="py-16 text-4xl lg:text-5xl">Strive to create awesome and great products!</p>
+        <a href="https://github.com/piapot"
+           target="_blank"
+           rel="noopener noreferrer">
+           <button type="button" class="btn normal-case ml-4 text-xl">
+            <i class="iconfont icon-github pr-2"></i>
+            GitHub
+          </button>
+        </a>
+        <a href="mailto:piapot.hou@outlook.com">
+          <button type="button" class="btn normal-case ml-4 text-xl">
+            <i class="iconfont icon-mail pr-2"></i>
+            Email
+          </button>
+        </a>
+      </section>
+    </article>
+  </main>
+  <footer class="footer justify-center items-center p-4 bg-neutral text-neutral-content">
+    <p class="text-md lg:text-lg">Copyright &copy; Piapot | 2022 - All right reserved</p>
+  </footer>
+  <style>
+    @import url("https://at.alicdn.com/t/font_3242902_tk431ukiufo.css");
+    @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+
+    :root {
+      font-family: "Caveat";
+    }
+
+    i {
+      font-size: 1.25rem!important;
+    }
+  </style>
+</Layout>

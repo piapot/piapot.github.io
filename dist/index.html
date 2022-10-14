@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="white">
+    <meta name="author" content="piapot">
+    <meta name="keywords" content="piapot">
+    <meta name="description" content="Author: piapot, Category: homepage, piapot's personal homepage.">
+    <meta name="generator" content="Astro v1.5.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>Welcome to my homepage.</title>
+    <script>
+      (function () {
+        var preferDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = localStorage.getItem("theme") || (preferDark ? "dark" : "light");
+        var setThemeMode = function (theme) {
+          var theme = theme || "light"
+          document.documentElement.setAttribute("data-theme", theme);
+          localStorage.setItem("theme", theme);
+        };
+        if (window.matchMedia) {
+          window.matchMedia("(prefers-color-scheme: dark)").onchange = function (event) {
+            setThemeMode(event.matches ? "dark" : "light");
+          };
+        }
+        setThemeMode(theme);
+      })();
+    </script>
+  <link rel="stylesheet" href="/assets/index.78d268eb.css" /></head>
+  <body>
+    <main class="hero min-h-screen bg-amber-500 dark:bg-blue-700 text-white dark:text-gray-300 astro-EYZ5KIGM">
+    <article class="hero-content text-center astro-EYZ5KIGM">
+      <section class="astro-EYZ5KIGM">
+        <h1 class="text-5xl lg:text-7xl font-bold astro-EYZ5KIGM">Hello there!</h1>
+        <p class="py-16 text-4xl lg:text-5xl astro-EYZ5KIGM">Strive to create awesome and great products!</p>
+        <a href="https://github.com/piapot" target="_blank" rel="noopener noreferrer" class="astro-EYZ5KIGM">
+           <button type="button" class="btn normal-case ml-4 text-xl astro-EYZ5KIGM">
+            <i class="iconfont icon-github pr-2 astro-EYZ5KIGM"></i>
+            GitHub
+          </button>
+        </a>
+        <a href="mailto:piapot.hou@outlook.com" class="astro-EYZ5KIGM">
+          <button type="button" class="btn normal-case ml-4 text-xl astro-EYZ5KIGM">
+            <i class="iconfont icon-mail pr-2 astro-EYZ5KIGM"></i>
+            Email
+          </button>
+        </a>
+      </section>
+    </article>
+  </main><footer class="footer justify-center items-center p-4 bg-neutral text-neutral-content astro-EYZ5KIGM">
+    <p class="text-md lg:text-lg astro-EYZ5KIGM">Copyright &copy; Piapot | 2022 - All right reserved</p>
+  </footer>
+    
+  </body>
+</html>
