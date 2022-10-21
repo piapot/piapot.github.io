@@ -3,6 +3,9 @@
         "astro",
         "astrojs",
         "daisyui",
-        "tailwindcss"
+        "fontsource",
+        "iconify",
+        "tailwindcss",
+        "unocss"
     ]
 }

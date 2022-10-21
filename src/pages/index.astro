@@ -1,5 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import "@fontsource/caveat"
 ---
 
 <Layout title="Welcome to my homepage.">
@@ -12,13 +13,13 @@ import Layout from "../layouts/Layout.astro";
            target="_blank"
            rel="noopener noreferrer">
            <button type="button" class="btn normal-case ml-4 text-xl">
-            <i class="iconfont icon-github pr-2"></i>
+            <i class="i-mdi-github text-2xl mr-2"></i>
             GitHub
           </button>
         </a>
         <a href="mailto:piapot.hou@outlook.com">
           <button type="button" class="btn normal-case ml-4 text-xl">
-            <i class="iconfont icon-mail pr-2"></i>
+            <i class="i-mdi-email text-2xl mr-2"></i>
             Email
           </button>
         </a>
@@ -28,16 +29,10 @@ import Layout from "../layouts/Layout.astro";
   <footer class="footer justify-center items-center p-4 bg-neutral text-neutral-content">
     <p class="text-md lg:text-lg">Copyright &copy; Piapot | 2022 - All right reserved</p>
   </footer>
-  <style>
-    @import url("https://at.alicdn.com/t/font_3242902_tk431ukiufo.css");
-    @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
-
-    :root {
-      font-family: "Caveat";
-    }
-
-    i {
-      font-size: 1.25rem!important;
-    }
-  </style>
 </Layout>
+
+<style>
+  :root {
+    font-family: "Caveat", cursive;
+  }
+</style>
