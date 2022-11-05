@@ -1,18 +1,21 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro"
 import "@fontsource/caveat"
 ---
 
 <Layout title="Welcome to my homepage.">
-  <main class="hero min-h-screen bg-amber-500 dark:bg-blue-700 text-white dark:text-gray-300">
+  <style slot="inner-head">
+    :root {
+      font-family: "Caveat", cursive;
+    }
+  </style>
+  <main slot="inner-body" class="hero min-h-screen bg-amber-500 dark:bg-blue-700 text-white dark:text-gray-300">
     <article class="hero-content text-center">
       <section>
         <h1 class="text-5xl lg:text-7xl font-bold">Hello there!</h1>
         <p class="py-16 text-4xl lg:text-5xl">Strive to create awesome and great products!</p>
-        <a href="https://github.com/piapot"
-           target="_blank"
-           rel="noopener noreferrer">
-           <button type="button" class="btn normal-case ml-4 text-xl">
+        <a href="https://github.com/piapot" target="_blank" rel="noopener noreferrer">
+          <button type="button" class="btn normal-case ml-4 text-xl">
             <i class="i-mdi-github text-2xl mr-2"></i>
             GitHub
           </button>
@@ -26,13 +29,7 @@ import "@fontsource/caveat"
       </section>
     </article>
   </main>
-  <footer class="footer justify-center items-center p-4 bg-neutral text-neutral-content">
+  <footer slot="inner-body" class="footer justify-center items-center p-4 bg-neutral text-neutral-content">
     <p class="text-md lg:text-lg">Copyright &copy; Piapot | 2022 - All right reserved</p>
   </footer>
 </Layout>
-
-<style>
-  :root {
-    font-family: "Caveat", cursive;
-  }
-</style>
