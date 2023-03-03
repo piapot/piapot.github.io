@@ -1,4 +1,4 @@
-import type { AttributifyAttributes } from "@unocss/preset-attributify"
+import type { AttributifyAttributes } from '@unocss/preset-attributify'
 
 declare global {
   namespace astroHTML.JSX {
@@ -6,7 +6,7 @@ declare global {
   }
 }
 
-declare module "solid-js" {
+declare module 'solid-js' {
   namespace JSX {
     interface HTMLAttributes<T> extends AttributifyAttributes {}
   }

@@ -4,7 +4,7 @@ export interface Props {
   className?: string
 }
 
-const { title, className } = Astro.props
+const { title, className = '' } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -29,9 +29,9 @@ const { title, className } = Astro.props
 
 <style>
   @font-face {
-    font-family: "Hubot Sans";
-    src: url("/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
-      url("/fonts/Hubot-Sans.woff2") format("woff2-variations");
+    font-family: 'Hubot Sans';
+    src: url('/fonts/Hubot-Sans.woff2') format('woff2 supports variations'),
+      url('/fonts/Hubot-Sans.woff2') format('woff2-variations');
     font-weight: 200 900;
     font-stretch: 75% 125%;
   }
@@ -41,6 +41,6 @@ const { title, className } = Astro.props
     overflow-y: auto;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: #0000;
-    font-family: "Hubot Sans", monospace, sans-serif;
+    font-family: 'Hubot Sans', monospace, sans-serif;
   }
 </style>

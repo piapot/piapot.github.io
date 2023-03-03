@@ -1,18 +1,18 @@
 ---
-import Layout from "@/layouts/BaseLayout.astro"
+import Layout from '@/layouts/BaseLayout.astro'
 
 const header_links: { link: string; name?: string; icon?: string; hover?: string }[] = [
   {
-    name: "GitHub",
-    icon: "i-mdi:github",
-    link: "https://github.com/piapot",
-    hover: "hover:text-white hover:bg-slate-800",
+    name: 'GitHub',
+    icon: 'i-mdi:github',
+    link: 'https://github.com/piapot',
+    hover: 'hover:text-white hover:bg-slate-800',
   },
   {
-    name: "Email",
-    icon: "i-mdi:email",
-    link: "mailto:piapot.hou@outlook.com",
-    hover: "hover:text-white hover:bg-blue-500",
+    name: 'Email',
+    icon: 'i-mdi:email',
+    link: 'mailto:piapot.hou@outlook.com',
+    hover: 'hover:text-white hover:bg-blue-500',
   },
 ]
 const projects: { icon: string; name: string; desc?: string; icon_color?: string }[] = []
@@ -29,9 +29,9 @@ const projects: { icon: string; name: string; desc?: string; icon_color?: string
     <ul class="flex flex-row flex-wrap py-4 gap-4">
       {
         header_links.map(item => (
-          <li class:list={[item.hover, "flex flex-center px-3 py-1 text-slate-800 bg-slate-50 rounded"]}>
+          <li class:list={[item.hover, 'flex flex-center px-3 py-1 text-slate-800 bg-slate-100 rounded']}>
             <a href={item.link} target="_blank" class="flex flex-center gap-2">
-              {item.icon && <i class:list={[item.icon, "text-2xl"]} />}
+              {item.icon && <i class:list={[item.icon, 'text-2xl']} />}
               {item.name && <span class="leading-loose">{item.name}</span>}
             </a>
           </li>
@@ -52,8 +52,8 @@ const projects: { icon: string; name: string; desc?: string; icon_color?: string
           <div class="grid gap-4 grid-cols-1" md="grid-cols-2">
             {projects.map(item => (
               <a href="/">
-                <section class="flex flex-row px-4 py-2 rounded bg-slate-50 hover:bg-slate-200 justify-between gap-2">
-                  <i class:list={[item.icon, item.icon_color, "text-5xl"]} />
+                <section class="flex flex-row px-4 py-2 rounded bg-slate-100 hover:bg-slate-200 justify-between gap-2">
+                  <i class:list={[item.icon, item.icon_color, 'text-5xl']} />
                   <div class="flex flex-col flex-1 justify-center">
                     <h3 class="text-xl text-slate-800">{item.name}</h3>
                     {item.desc && <p class="text-slate-500">{item.desc}</p>}

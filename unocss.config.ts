@@ -7,20 +7,20 @@ import {
   transformerAttributifyJsx,
   transformerCompileClass,
   transformerVariantGroup,
-} from "unocss"
-import type { Theme } from "unocss/preset-uno"
-import { presetExtra } from "unocss-preset-extra"
-import presetAutoprefixer from "unocss-preset-autoprefixer"
-import { presetScrollbarHide } from "unocss-preset-scrollbar-hide"
+} from 'unocss'
+import type { Theme } from 'unocss/preset-uno'
+import { presetExtra } from 'unocss-preset-extra'
+import presetAutoprefixer from 'unocss-preset-autoprefixer'
+import { presetScrollbarHide } from 'unocss-preset-scrollbar-hide'
 
 export default defineConfig<Theme>({
   theme: {},
   presets: [
-    presetUno({ dark: "media" }),
+    presetUno({ dark: 'media' }),
     presetIcons({
       extraProperties: {
-        display: "inline-block",
-        "vertical-align": "text-bottom",
+        display: 'inline-block',
+        'vertical-align': 'text-bottom',
       },
     }),
     presetAttributify(),
@@ -35,6 +35,6 @@ export default defineConfig<Theme>({
     transformerVariantGroup(),
   ],
   shortcuts: {
-    "flex-center": "justify-center items-center",
+    'flex-center': 'justify-center items-center',
   },
 })
