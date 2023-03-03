@@ -1,0 +1,46 @@
+---
+export interface Props {
+  title: string
+  className?: string
+}
+
+const { title, className } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="white" />
+    <meta name="author" content="piapot" />
+    <meta name="keywords" content="piapot" />
+    <meta name="description" content="Author: piapot, Category: homepage, piapot's personal homepage." />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body class={className}>
+    <slot />
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "Hubot Sans";
+    src: url("/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
+      url("/fonts/Hubot-Sans.woff2") format("woff2-variations");
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
+  :root {
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: #0000;
+    font-family: "Hubot Sans", monospace, sans-serif;
+  }
+</style>

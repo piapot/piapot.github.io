@@ -1,10 +1,12 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": ["astro.config.ts"],
+  "include": ["src", "astro.config.ts", "unocss.config.ts", "shims.d.ts"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
   }
 }

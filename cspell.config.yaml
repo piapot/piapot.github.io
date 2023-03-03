@@ -1,0 +1,7 @@
+version: "0.2"
+ignorePaths: ["./*.{json,config.*,d.ts}"]
+dictionaryDefinitions: []
+dictionaries: []
+words: []
+ignoreWords: []
+import: []

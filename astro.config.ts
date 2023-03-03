@@ -1,15 +1,9 @@
 import { defineConfig } from "astro/config"
-import tailwind from "@astrojs/tailwind"
+import solidJs from "@astrojs/solid-js"
 import unocss from "unocss/astro"
-import { presetUno, transformerDirectives, presetIcons } from "unocss"
 
+// https://astro.build/config
 export default defineConfig({
   outDir: "./docs",
-  integrations: [
-    unocss({
-      presets: [presetUno(), presetIcons()],
-      transformers: [transformerDirectives()],
-    }),
-    tailwind(),
-  ],
+  integrations: [solidJs(), unocss()],
 })

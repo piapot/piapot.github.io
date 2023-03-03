@@ -1,35 +1,73 @@
 ---
-import Layout from "@/layouts/Layout.astro"
-import "@fontsource/caveat"
+import Layout from "@/layouts/BaseLayout.astro"
+
+const header_links: { link: string; name?: string; icon?: string; hover?: string }[] = [
+  {
+    name: "GitHub",
+    icon: "i-mdi:github",
+    link: "https://github.com/piapot",
+    hover: "hover:text-white hover:bg-slate-800",
+  },
+  {
+    name: "Email",
+    icon: "i-mdi:email",
+    link: "mailto:piapot.hou@outlook.com",
+    hover: "hover:text-white hover:bg-blue-500",
+  },
+]
+const projects: { icon: string; name: string; desc?: string; icon_color?: string }[] = []
 ---
 
-<Layout title="Welcome to my homepage.">
-  <style slot="inner-head">
-    :root {
-      font-family: "Caveat", cursive;
+<Layout title="Piapot">
+  <header class="flex flex-col h-screen px-5 gap-2" md="px-10">
+    <h1 class="flex flex-col pt-32 pb-8 text-5xl font-bold gap-2">
+      <span>Hello,👋</span>
+      <span>I'm Piapot.</span>
+    </h1>
+    <p class="text-2xl">Front-end developer.</p>
+    <p class="text-2xl">Strive to create awesome and great products!</p>
+    <ul class="flex flex-row flex-wrap py-4 gap-4">
+      {
+        header_links.map(item => (
+          <li class:list={[item.hover, "flex flex-center px-3 py-1 text-slate-800 bg-slate-50 rounded"]}>
+            <a href={item.link} target="_blank" class="flex flex-center gap-2">
+              {item.icon && <i class:list={[item.icon, "text-2xl"]} />}
+              {item.name && <span class="leading-loose">{item.name}</span>}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </header>
+  <main class="px-5" md="px-10">
+    {
+      projects.length !== 0 && (
+        <article id="projects" class="py-8">
+          <h2 class="flex flex-row py-4 text-3xl font-bold justify-between items-center">
+            <a href="#projects">Projects</a>
+            <a href="/">
+              <i class="i-mdi:chevron-right flex flex-center" />
+            </a>
+          </h2>
+          <div class="grid gap-4 grid-cols-1" md="grid-cols-2">
+            {projects.map(item => (
+              <a href="/">
+                <section class="flex flex-row px-4 py-2 rounded bg-slate-50 hover:bg-slate-200 justify-between gap-2">
+                  <i class:list={[item.icon, item.icon_color, "text-5xl"]} />
+                  <div class="flex flex-col flex-1 justify-center">
+                    <h3 class="text-xl text-slate-800">{item.name}</h3>
+                    {item.desc && <p class="text-slate-500">{item.desc}</p>}
+                  </div>
+                </section>
+              </a>
+            ))}
+          </div>
+        </article>
+      )
     }
-  </style>
-  <main slot="inner-body" class="hero min-h-screen bg-amber-500 dark:bg-blue-700 text-white dark:text-gray-300">
-    <article class="hero-content text-center">
-      <section>
-        <h1 class="text-5xl lg:text-7xl font-bold">Hello there!</h1>
-        <p class="py-16 text-4xl lg:text-5xl">Strive to create awesome and great products!</p>
-        <a href="https://github.com/piapot" target="_blank" rel="noopener noreferrer">
-          <button type="button" class="btn normal-case ml-4 text-xl">
-            <i class="i-mdi-github text-2xl mr-2"></i>
-            GitHub
-          </button>
-        </a>
-        <a href="mailto:piapot.hou@outlook.com">
-          <button type="button" class="btn normal-case ml-4 text-xl">
-            <i class="i-mdi-email text-2xl mr-2"></i>
-            Email
-          </button>
-        </a>
-      </section>
-    </article>
   </main>
-  <footer slot="inner-body" class="footer justify-center items-center p-4 bg-neutral text-neutral-content">
-    <p class="text-md lg:text-lg">Copyright &copy; Piapot | 2022 - All right reserved</p>
+  <footer class="flex flex-col flex-center px-5 py-4 bg-slate-800" md="px-10">
+    <p class="text-white">Copyright © 2023 Piapot.</p>
+    <p class="text-white">All rights reserved.</p>
   </footer>
 </Layout>
