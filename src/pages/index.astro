@@ -6,7 +6,7 @@ const header_links: { link: string; name?: string; icon?: string; hover?: string
     name: 'GitHub',
     icon: 'i-mdi:github',
     link: 'https://github.com/piapot',
-    hover: 'hover:text-white hover:bg-slate-800',
+    hover: 'hover:text-white hover:bg-gray-800',
   },
   {
     name: 'Email',
@@ -29,7 +29,7 @@ const projects: { icon: string; name: string; desc?: string; icon_color?: string
     <ul class="flex flex-row flex-wrap py-4 gap-4">
       {
         header_links.map(item => (
-          <li class:list={[item.hover, 'flex flex-center px-3 py-1 text-slate-800 bg-slate-100 rounded']}>
+          <li class:list={[item.hover, 'flex flex-center px-3 py-1 text-gray-800 bg-gray-50 rounded']}>
             <a href={item.link} target="_blank" class="flex flex-center gap-2">
               {item.icon && <i class:list={[item.icon, 'text-2xl']} />}
               {item.name && <span class="leading-loose">{item.name}</span>}
@@ -52,11 +52,11 @@ const projects: { icon: string; name: string; desc?: string; icon_color?: string
           <div class="grid gap-4 grid-cols-1" md="grid-cols-2">
             {projects.map(item => (
               <a href="/">
-                <section class="flex flex-row px-4 py-2 rounded bg-slate-100 hover:bg-slate-200 justify-between gap-2">
+                <section class="flex flex-row px-4 py-2 rounded bg-gray-50 hover:bg-gray-100 justify-between gap-2">
                   <i class:list={[item.icon, item.icon_color, 'text-5xl']} />
                   <div class="flex flex-col flex-1 justify-center">
-                    <h3 class="text-xl text-slate-800">{item.name}</h3>
-                    {item.desc && <p class="text-slate-500">{item.desc}</p>}
+                    <h3 class="text-xl text-gray-800">{item.name}</h3>
+                    {item.desc && <p class="text-gray-500">{item.desc}</p>}
                   </div>
                 </section>
               </a>
@@ -66,7 +66,7 @@ const projects: { icon: string; name: string; desc?: string; icon_color?: string
       )
     }
   </main>
-  <footer class="flex flex-col flex-center px-5 py-4 bg-slate-800" md="px-10">
+  <footer class="flex flex-col flex-center px-5 py-4 bg-gray-800" md="px-10">
     <p class="text-white">Copyright © 2023 Piapot.</p>
     <p class="text-white">All rights reserved.</p>
   </footer>

@@ -1,0 +1,14 @@
+---
+import Layout from '@/layouts/BaseLayout.astro'
+---
+
+<Layout title="404: Not Found Page!">
+  <main class="p-5 flex flex-col flex-center w-full min-h-screen">
+    <h1 class="text-4xl font-bold">404: Not Found Page!</h1>
+    <a id="back" href="/" class="mt-8 text-2xl underline underline-dashed hover:underline-solid text-blue">Go Back</a>
+  </main>
+</Layout>
+
+<script>
+  document.getElementById('back')!.addEventListener('click', () => window.history.back())
+</script>
