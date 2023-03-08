@@ -5,7 +5,9 @@ layout: ../../layouts/MarkdownLayout.astro
 
 # Hi there 👋
 
-I will be blogging to learn languages such as English, Haskell, Python, Rust or Zig. My primary programming language is JavaScript/TypeScript, but I want to learn more languages, whether it’s scripting languages or native programming languages, or even spoken languages (like English).
+I will be blogging to learn languages such as English, Haskell, Python, Rust or Zig.
+
+My primary programming language is JavaScript/TypeScript, but I want to learn more languages, whether it’s scripting languages or native programming languages, or even spoken languages (like English).
 
 Sometimes I may write some code blocks to showcase some inspiration.
 
