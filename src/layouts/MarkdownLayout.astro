@@ -18,7 +18,7 @@ const { title } = Astro.props
     <meta name="theme-color" content="white" />
     <meta name="author" content="piapot" />
     <meta name="keywords" content="piapot" />
-    <meta name="description" content="Author: piapot, Category: homepage, piapot's personal homepage." />
+    <meta name="description" content="Author: piapot, Category: blog, piapot's personal blog." />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" href="/favicon.ico" />
     <title>{title}</title>
@@ -32,20 +32,12 @@ const { title } = Astro.props
 </html>
 
 <style>
-  @font-face {
-    font-family: 'Hubot Sans';
-    src: url('/fonts/Hubot-Sans.woff2') format('woff2 supports variations'),
-      url('/fonts/Hubot-Sans.woff2') format('woff2-variations');
-    font-weight: 200 900;
-    font-stretch: 75% 125%;
-  }
   :root {
     width: 100%;
     min-height: 100vh;
     overflow-y: auto;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: #0000;
-    font-family: 'Hubot Sans', monospace, sans-serif;
   }
 </style>
 
@@ -59,7 +51,7 @@ const { title } = Astro.props
   }
 
   p {
-    @apply my-4 text-lg;
+    @apply my-4;
   }
 
   pre {
@@ -82,10 +74,6 @@ const { title } = Astro.props
     h1 {
       @apply mt-8 mb-4 text-4xl;
     }
-
-    p {
-      @apply text-xl;
-    }
   }
 
   @media (min-width: 768px) {
@@ -94,7 +82,7 @@ const { title } = Astro.props
     }
 
     p {
-      @apply my-2 text-xl;
+      @apply my-2;
     }
   }
 
