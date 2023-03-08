@@ -1,7 +1,14 @@
 ---
 import Layout from '@/layouts/BaseLayout.astro'
+import Footer from '@/components/Footer.astro'
 
-const header_links: { link: string; name?: string; icon?: string; hover?: string }[] = [
+const header_links: {
+  link: string
+  name?: string
+  icon?: string
+  hover?: string
+  target?: '_blank' | '_self' | '_parent'
+}[] = [
   {
     name: 'GitHub',
     icon: 'i-mdi:github',
@@ -14,12 +21,19 @@ const header_links: { link: string; name?: string; icon?: string; hover?: string
     link: 'mailto:piapot.hou@outlook.com',
     hover: 'hover:text-white hover:bg-blue-500',
   },
+  {
+    name: 'Blog',
+    icon: 'i-mdi:blog',
+    link: '/blog',
+    hover: 'hover:text-white hover:bg-emerald',
+    target: '_self',
+  },
 ]
 const projects: { icon: string; name: string; desc?: string; icon_color?: string }[] = []
 ---
 
 <Layout title="Piapot">
-  <header class="flex flex-col h-screen px-5 gap-2" md="px-10">
+  <header class="flex flex-col h-screen px-5 gap-2 transition-all" sm="px-10" md="px-15" lg="px-20">
     <h1 class="flex flex-col pt-32 pb-8 text-5xl font-bold gap-2">
       <span>Hello,👋</span>
       <span>I'm Piapot.</span>
@@ -30,7 +44,7 @@ const projects: { icon: string; name: string; desc?: string; icon_color?: string
       {
         header_links.map(item => (
           <li class:list={[item.hover, 'flex flex-center px-3 py-1 text-gray-800 bg-gray-50 rounded']}>
-            <a href={item.link} target="_blank" class="flex flex-center gap-2">
+            <a href={item.link} target={item.target || '_blank'} class="flex flex-center gap-2">
               {item.icon && <i class:list={[item.icon, 'text-2xl']} />}
               {item.name && <span class="leading-loose">{item.name}</span>}
             </a>
@@ -39,7 +53,7 @@ const projects: { icon: string; name: string; desc?: string; icon_color?: string
       }
     </ul>
   </header>
-  <main class="px-5" md="px-10">
+  <main class="px-5 transition-all" sm="px-10" md="px-15" lg="px-20">
     {
       projects.length !== 0 && (
         <article id="projects" class="py-8">
@@ -66,8 +80,5 @@ const projects: { icon: string; name: string; desc?: string; icon_color?: string
       )
     }
   </main>
-  <footer class="flex flex-col flex-center px-5 py-4 bg-gray-800" md="px-10">
-    <p class="text-white">Copyright © 2023 Piapot.</p>
-    <p class="text-white">All rights reserved.</p>
-  </footer>
+  <Footer />
 </Layout>

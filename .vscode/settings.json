@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["astro", "astrojs", "daisyui", "fontsource", "iconify", "Parens", "tailwindcss", "unocss"]
+  "cSpell.words": ["astro", "astrojs", "daisyui", "fontsource", "iconify", "Parens", "tailwindcss", "unocss"],
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
 }

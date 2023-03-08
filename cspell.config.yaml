@@ -1,7 +1,9 @@
 version: '0.2'
-ignorePaths: ['./*.{json,config.*,d.ts}']
+ignorePaths:
+  - ./*.{json,config.*,d.ts}
 dictionaryDefinitions: []
 dictionaries: []
-words: []
+words:
+  - println
 ignoreWords: []
 import: []
