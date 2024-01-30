@@ -2,34 +2,34 @@
   "name": "piapot.github.io",
   "type": "module",
   "version": "0.1.0",
-  "author": "piapot",
+  "author": "piapot<piapot.hou@outlook.com>",
   "private": true,
   "scripts": {
+    "astro": "astro",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
     "format": "prettier -w .",
     "deploy:vercel": "vercel --prod"
   },
   "dependencies": {
-    "@astrojs/solid-js": "^2.1.0",
-    "@astrojs/vercel": "^3.2.0",
-    "astro": "^2.1.0",
-    "solid-js": "^1.6.12"
+    "@astrojs/solid-js": "^4.0.1",
+    "@astrojs/vercel": "^7.0.2",
+    "astro": "^4.2.7",
+    "solid-js": "^1.8.12"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.49",
+    "@iconify-json/mdi": "^1.1.64",
     "@unocss/preset-attributify": "^0.49.8",
     "@unocss/reset": "^0.45.30",
-    "browserslist": "^4.21.5",
-    "lightningcss": "^1.19.0",
+    "browserslist": "^4.22.3",
+    "lightningcss": "^1.23.0",
     "prettier-plugin-astro": "^0.7.2",
     "unocss": "^0.45.30",
     "unocss-preset-autoprefixer": "^0.0.5",
     "unocss-preset-extra": "^0.4.3",
     "unocss-preset-scrollbar-hide": "^1.0.1",
-    "vercel": "^28.16.15"
+    "vercel": "^28.20.0"
   }
 }

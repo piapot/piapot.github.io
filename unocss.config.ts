@@ -19,8 +19,8 @@ export default defineConfig<Theme>({
     presetUno({ dark: 'media' }),
     presetIcons({
       extraProperties: {
-        display: 'inline-block',
-        'vertical-align': 'text-bottom',
+        'display': 'inline-block',
+        'vertical-align': 'middle',
       },
     }),
     presetAttributify(),

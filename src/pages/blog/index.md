@@ -3,7 +3,7 @@ title: Blog
 layout: ../../layouts/MarkdownLayout.astro
 ---
 
-# Hi there 👋
+## Hi there 👋
 
 I will be blogging to learn languages such as English, Haskell, Python, Rust or Zig.
 
@@ -15,7 +15,7 @@ Sometimes I may write some code blocks to showcase some inspiration.
 
 - English
 
-```
+```en
 Hello World!
 ```
 
@@ -25,17 +25,17 @@ Hello World!
 console.log('Hello World!')
 ```
 
+- Python
+
+```py
+print('Hello, World!')
+```
+
 - Haskell
 
 ```hs
 main :: IO ()
 main = putStrLn "Hello, World!"
-```
-
-- Python
-
-```py
-print("Hello, World!")
 ```
 
 - Rust
