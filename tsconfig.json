@@ -1,8 +1,9 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": ["src", "shims.d.ts", "astro.config.ts"],
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "preserve",
+    "strictNullChecks": true,
   },
+  "include": ["src", "shims.d.ts", "astro.config.ts"],
 }

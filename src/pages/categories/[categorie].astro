@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content'
+
+import BaseLayout from 'src/layouts/BaseLayout.astro'
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts')
+  const uniqueCategories = [...new Set(allPosts.map(post => post.data.categories).flat())]
+  return uniqueCategories.map(categorie => {
+    const filteredPosts = allPosts.filter(post => post.data.categories.includes(categorie))
+    return {
+      params: { categorie },
+      props: { posts: filteredPosts },
+    }
+  })
+}
+
+const { categorie } = Astro.params
+---
+
+<BaseLayout title="Piapot | Blog categories" description="Piapot's Blog categories">
+  <main class="flex-1 p-4 flex flex-col justify-center items-center">
+    {/* TODO */}
+  </main>
+</BaseLayout>

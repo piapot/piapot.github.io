@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import remarkToc from 'remark-toc'
 import tailwind from '@astrojs/tailwind'
-import icon from 'astro-icon'
 import solid from '@astrojs/solid-js'
 import sitemap from '@astrojs/sitemap'
 import vercel from '@astrojs/vercel/static'
@@ -21,11 +20,10 @@ export default defineConfig({
       shikiConfig: { theme: 'one-dark-pro' },
       remarkPlugins: [remarkToc],
       remarkRehype: { footnoteLabel: 'Footnotes' },
-      gfm: false,
+      gfm: true,
     }),
     tailwind(),
-    icon(),
-    solid({ include: ['**/solid/*'] }),
+    solid({ include: ['src/components/solid/**/*'] }),
     sitemap(),
   ],
 })

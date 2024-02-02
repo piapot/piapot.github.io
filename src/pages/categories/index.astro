@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content'
+import { format } from 'date-fns'
+
+import BaseLayout from 'src/layouts/BaseLayout.astro'
+
+const allPosts = await getCollection('posts')
+---
+
+<BaseLayout title="Piapot | Blog categories" description="Piapot's Blog categories">
+  <main class="flex-1 px-4 py-8 flex flex-col items-center gap-4">
+    <article class="w-full">
+      <h2 class="text-xl font-bold">Blog categories</h2>
+      <section class="w-full py-4 flex flex-col gap-4">
+        {
+          allPosts.map(post =>
+            post.data.categories.map(categorie => (
+              <details class="p-4 border rounded-lg">
+                <summary>{categorie}</summary>
+                {allPosts
+                  .filter(post => post.data.categories.includes(categorie))
+                  .map(post => {
+                    const formattedDatetime = format(post.data.pubDate, 'yyyy-MM-dd')
+                    return (
+                      <section class="pt-2 flex flex-row items-center gap-2">
+                        <time datetime={formattedDatetime} class="px-2 bg-gray-100 border rounded-lg">
+                          {formattedDatetime}
+                        </time>
+                        <a href={`/posts/${post.slug}`} class="underline text-blue-500">
+                          <h3>{post.data.title}</h3>
+                        </a>
+                      </section>
+                    )
+                  })}
+              </details>
+            )),
+          )
+        }
+      </section>
+    </article>
+  </main>
+</BaseLayout>

@@ -1,15 +1,17 @@
 ---
-import Layout from 'src/layouts/BaseLayout.astro'
+import BaseLayout from 'src/layouts/BaseLayout.astro'
 import Footer from 'src/components/Footer.astro'
+
+const title = '404: Not Found Page.'
 ---
 
-<Layout title="404: Not Found Page!">
-  <main class="p-5 flex flex-col flex-center w-full min-h-screen">
-    <h1 class="text-4xl font-bold">404: Not Found Page!</h1>
-    <a id="back" href="/" class="mt-8 text-2xl underline underline-dashed hover:underline-solid text-blue">Go Back</a>
+<BaseLayout title={title} description={title}>
+  <main class="flex-1 p-4 flex flex-col justify-center items-center">
+    <h1 class="text-2xl font-bold">{title}</h1>
+    <a id="back" href="/" class="mt-4 text-xl text-blue-500 underline hover:opacity-60">Go Back</a>
   </main>
   <Footer />
-</Layout>
+</BaseLayout>
 
 <script>
   document.getElementById('back')!.addEventListener('click', () => window.history.back())

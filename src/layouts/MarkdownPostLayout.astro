@@ -1,0 +1,35 @@
+---
+import 'github-markdown-css'
+
+import BaseLayout from 'src/layouts/BaseLayout.astro'
+
+type Frontmatter = Readonly<{
+  title: string
+  description: string
+  pubDate: Date
+  categories: string[]
+  author: string
+  image?: { url: string; alt: string }
+}>
+
+export interface Props {
+  frontmatter: Frontmatter
+}
+
+const { frontmatter } = Astro.props
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <main class="markdown-body flex-1 px-4 py-8">
+    <slot />
+  </main>
+</BaseLayout>
+
+<style is:inline>
+  .markdown-body ul > li {
+    list-style-type: disc;
+  }
+  .markdown-body ol > li {
+    list-style-type: decimal;
+  }
+</style>
